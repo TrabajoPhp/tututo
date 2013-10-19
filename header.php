@@ -20,12 +20,16 @@
 	<body>
 		<header>
 			<div id="login">
-				<form name="login" action="login.php" method="POST">
-					 <input type="email" name="email" placeholder="Email" required />
+				<form name="login" action="#" method="POST">
+					 <input type="text" name="nickname" placeholder="Nickname" required />
 					 <input type="password" name="password" placeholder="Password" required />
-					<input type="submit" class="boton" value="login" />
+					 <input type="submit" class="boton" value="login" />
 					<a href="registroUsuario.php" class="boton2">Registrarme</a>
 				</form>
+			</div>
+			<!--cambiar aca a display none-->
+			<div id="logueado">
+				<a href="#" class="bsalir">Salir</a> <a href="perfil.php" class="bconfig">Mi perfil</a><p>Hola, <strong>Nickname<?php $usuario ?></strong></p> 
 			</div>
 			<div id="logo">
 				<img src="img/logo.png" alt="mis tutoriales" />

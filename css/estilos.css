@@ -1,16 +1,13 @@
-*
-{
+*{
 	margin:0;
 	padding:0;
 	font-weight:normal;
 }
-body 
-{
+body {
 	font-family:'Asap',san serif;
 	background: url(../img/bg.jpg);
 }
-h1,h3
-{
+h1,h3{
 	float:left;
 	width:648px;
 	padding:5px 10px 5px 10px;
@@ -20,8 +17,7 @@ h1,h3
 	margin-bottom:10px;
 	border-radius:3px;
 }
-h2 
-{
+h2{
     position:relative;
 	left:70px;
 	width:208px;
@@ -32,43 +28,77 @@ h2
 	font-size:1em;
 	padding-top:5px;
 }
-h3
-{
+h3{
 	font-size:15px;
 }
-h5 a
-{
+h4{ /*titulo tutorial home*/
+}
+h5 a{
 	color:#2069b4;
 	text-decoration:none;
 }
-h5 a:hover
-{
+h5 a:hover{
 	color:black;
 }
-section
-{
-	float:left;
-	width:680px;
-}
-aside
-{
-	float:right;
-	width:290px;
-}
-input,select, file
-{
-	padding:5px;
-	margin-top:8px;
-}
-#main,#menu,header,footer,#copyrigth
-{
+#main,#menu,header,#copyrigth{
 	clear:both;
 	max-width:980px;
 	margin:auto;
 	margin-bottom:10px;
 }
-footer
-{
+input,select, file{
+	padding:5px;
+	margin-top:8px;
+}
+p{
+	text-align:justify;
+	margin-bottom:10px;
+}
+strong{
+	font-weight:bold;
+}
+a{
+	text-decoration:none;
+	color:#2069b4;
+}
+/*-------------------Header---------------------*/
+#login,#search,#logueado{
+	float:right;
+}
+#logo{
+	clear:both;
+}
+#logueado p{
+	margin-top:12px;
+	float:right;
+}
+/*-------------------Contenido---------------------*/
+section{
+	float:left;
+	width:680px;
+}
+#slider{
+	margin-bottom:10px;
+}
+/*-------------------Lateral---------------------*/
+aside{
+	float:right;
+	width:290px;
+}
+.publicidad{
+	width:270px;
+	background:white;
+	margin-bottom:10px;
+	border:1px #ccc solid;
+	padding:10px;
+}
+.lateral{
+	width:270px;
+}
+/*------------------Footer------------------------*/
+
+footer{
+	clear:both;
 	padding:20px;
 	color:white;
 	background:black;
@@ -76,59 +106,42 @@ footer
 	text-align:right;
 	font-size:12px;
 }
-footer a
-{
+footer a{
 	text-decoration:none;
 	color:white;
 }
-footer a:hover
-{
+footer a:hover{
 	text-decoration:underline;
+	color:white;
 }
-#copyrigth
-{
+#copyrigth{
 	font-family:sans-serif;
 	text-align:center;
 	font-size:9px;
 }
-#login,#search
-{
-	float:right;
-}
-#logo
-{
-	clear:both;
-}
-#redessociales,#top
-{
+
+#redessociales,#top{
 	width:50px;
 	position:fixed;
 	top:25%;
 	right:0;
 	z-index:3;
 }
-#top
-{
+#top{
 	top:92%
 }
-#slider
-{
-	margin-bottom:10px;
-}
-.boton
-{
+/*---------------------Botones---------------*/
+.boton { /*los buttons del formulario*/
 	background:url(../img/bgazul.jpg);
 	color:white;
 	padding:5px;
 	border:0px;
 	border-radius:5px;
 }
-.boton:hover
-{
-	background:gray;
+.boton:hover,.bconfig:hover{
+	background-color:gray;
 }
-.boton2,.boton3
-{
+.boton2,.boton3,.bsalir,.bconfig{
 	width:80px;
 	display:block;
 	float:right;
@@ -141,22 +154,38 @@ footer a:hover
 	margin-top:8px;
 	margin-left:5px;
 }
-.boton2:hover
-{
-	background:#2069b4 url(../img/next.png) no-repeat right;
+.boton2:hover,.bsalir:hover{
+	background-color:#2069b4;
 }
-.boton3
-{
+.boton3{
 	width:110px;
 	margin:10px;
 	background:#2069b4 url(../img/next.png) no-repeat right;
 }
-.boton3:hover
-{
+.boton3:hover{
 	background:#444444 url(../img/next.png) no-repeat right;
 }
-.pag,.selected
-{
+.boton4{
+	background:#5d6677;
+	padding:5px;
+	color:white;
+	text-decoration:none;
+	border-radius:5px;
+	font-size:12px;
+}
+.boton4:hover{
+	background:#2069b4;
+}
+
+.bsalir,.bconfig{
+	width:60px;
+	padding-left:27px;
+	background:#444444 url(../img/salir.png) no-repeat left;
+}
+.bconfig{
+	background:#2069b4 url(../img/config.png) no-repeat left;
+}
+.pag,.selected{
 	float:right;
 	width:14px;
 	display:block;
@@ -166,13 +195,11 @@ footer a:hover
 	text-decoration:none;
 	text-align:center;
 }
-.pag:hover,.selected
-{
+.pag:hover,.selected{
 	background:#ffffff;
 	color:#000000;
 }
-.prev,.next
-{
+.prev,.next{
 	float:right;
 	width:8px;
 	height:12px;
@@ -180,12 +207,11 @@ footer a:hover
 	margin-left:5px;
 	margin-top:3px;
 }
-.next
-{
+.next{
 	background:url(../img/next.png);
 }
-.tut
-{
+/*-------------------tutorial home---------------*/
+.tut{
 	float:left;
 	background:white;
 	width:210px;
@@ -193,31 +219,26 @@ footer a:hover
 	margin-right:14px;
 	border:1px #ccc solid;
 }
-.tut h4,.tut h5,.tut img
-{
+.tut h4,.tut h5,.tut img{
 	margin-left:10px;
 	margin-top:5px;
 	
 }
-.izq
-{
+.izq{
 	width:50%;
 	float:left;
 }
-.rating
-{
+.rating{
 	background:#f4f4f4;
 	border-top:1px solid #d2d2d2;
 	margin-top:5px;
 	padding:7px;
 	height:23px;
 }
-.der
-{
+.der{
 	float:right;
 }
-.der a
-{
+.der a{
 	width:80px;
 	display:block;
 	float:right;
@@ -228,21 +249,24 @@ footer a:hover
 	text-decoration:none;
 	font-size:13px;
 }
-.der a:hover
-{
+.der a:hover{
 	background:gray url(../img/next.png) no-repeat right;
 }
-.publicidad
-{
-	width:270px;
-	background:white;
-	margin-bottom:10px;
-	border:1px #ccc solid;
-	padding:10px;
+.editar,.borrar{
+	width:15px;
+	height:15px;
+	display:block;
+	float:right;
+	background:url(../img/edit.png) no-repeat right;
+	margin-bottom:5px;
+	margin-left:5px;
 }
-/*Paginas internas*/
-article
-{
+.borrar{
+	background:url(../img/erase.png) no-repeat right;
+}
+
+/*---------------Tutorial Individual-------------------------*/
+article{
 	width:648px;
 	float:left;
 	background:#ffffff;
@@ -275,27 +299,34 @@ article label {
     padding: 3px;
     width: 150px;
 }
-article img
-{
+article img{
 	text-align:center;
 	margin-top:10px;
 	margin-bottom:5px;
 }
-p
-{
-	text-align:justify;
-	margin-bottom:10px;
+.titulo{
+	font-size:30px;
+	font-weight:bold;
+	background:none;
+	color:#000000;
 }
-/*perfil*/
-#imgperfil img
-{
+.subtitulo{
+	font-size:14px;
+}
+.subtitulo a{
+	color:black;
+}
+.subtitulo a:hover{
+	color:white;
+}
+/*---------------------Perfil ----------------------------*/
+#imgperfil img{
 	border:3px solid white;
 	float: left;
 	margin-right:20px;
 	margin-bottom:10px;
 }
-#datosperfil
-{
+#datosperfil{
 	float:left;
 }
 #datosperfil ul {
@@ -308,21 +339,11 @@ p
 	border-bottom:1px solid grey;
 	position:relative;
 } 
-.editar,.borrar
+aside #datosperfil ul
 {
-	width:15px;
-	height:15px;
-	display:block;
-	float:right;
-	background:url(../img/edit.png) no-repeat right;
-	margin-bottom:5px;
-	margin-left:5px;
+	width:290px;
 }
-.borrar
-{
-	background:url(../img/erase.png) no-repeat right;
-}
-/*Tutoriales Lista*/
+/*-----------------------Tutoriales Lista-----------*/
 #tutoriales ul {
     position:relative;
 	top:-10px;
@@ -341,37 +362,20 @@ p
 #tutoriales li:hover{
 	background:#f9fafb;
 }
-#tutoriales img
-{
+#tutoriales img{
 	display:block;
 	float:left;
 	margin-right:10px;
 }
-#tutoriales p
-{
+#tutoriales p{
 	margin-top:10px;
 }
-#tutoriales 
-{
+#tutoriales {
 	margin-top:0px;
 }
-.boton4
-{
-	background:#5d6677;
-	padding:5px;
-	color:white;
-	text-decoration:none;
-	border-radius:5px;
-	font-size:12px;
-}
-.boton4:hover
-{
-	background:#2069b4;
-}
 
-/*Menu Principal*/
-nav
-{
+/*-----------------------------Menu Principal-----------------------------*/
+nav{
 	margin-bottom:10px;
 	max-width: 100%;
 	height: 50px;

@@ -1,8 +1,8 @@
 <?php require_once('header.php'); ?>
 		<div id="main">
 			<section>
-				<h1>Título Tutorial</h1>
-				<h5>de <a href="perfil.php">Autor Nombre</a></h5>
+				<h1 class="titulo">Título Tutorial</h1>
+				<h3 class="subtitulo"><div class="der">00/00/2013</div> <div class="izq">de <a href="perfil.php">Autor Nombre</a></div></h3>
 				<article>
 					<img src="img/tutoriales/img_tut02.jpg" alt="" />
 					<p>
@@ -22,5 +22,5 @@
 					</div>
 				</article>
 			</section>
-		<?php require_once('lateral.php'); ?>
+		<?php require_once('lateralusuario.php'); ?>
 	<?php require_once('footer.php'); ?>

@@ -14,28 +14,28 @@
 					<div class="tut">
 						<h4>Titulo Tutorial</h4>
 						<img src="img/tutoriales/img_tut.jpg" alt="" />
-						<h5><a href="pag/perfil.php">Autor</a> | <a href="pag/perfil.php">Categoría</a></h5>
+						<h5><a href="perfil.php">Autor</a> | <a href="tutoriales.php">Categoría</a></h5>
 						<div class="rating">
 							<div class="izq"><input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> </div>
-							<div class="der"><a href="pag/tutorial.php">Ver Tutorial</a></div>
+							<div class="der"><a href="tutorial.php">Ver Tutorial</a></div>
 						</div>
 					</div>
 					<div class="tut">
 						<h4>Titulo Tutorial</h4>
 						<img src="img/tutoriales/img_tut.jpg" alt="" />
-						<h5><a href="perfil.php">Autor</a> | <a href="perfil.php">Categoría</a></h5>
+						<h5><a href="perfil.php">Autor</a> | <a href="tutoriales.php">Categoría</a></h5>
 						<div class="rating">
 							<div class="izq"><input name="star2" type="radio" class="star"/> <input name="star2" type="radio" class="star"/> <input name="star2" type="radio" class="star"/> <input name="star2" type="radio" class="star"/> <input name="star2" type="radio" class="star"/> </div>
-							<div class="der"><a href="pag/tutorial.php">Ver Tutorial</a></div>
+							<div class="der"><a href="tutorial.php">Ver Tutorial</a></div>
 						</div>
 					</div>
 					<div class="tut">
 						<h4>Titulo Tutorial</h4>
 						<img src="img/tutoriales/img_tut.jpg" alt="" />
-						<h5><a href="perfil.php">Autor</a> | <a href="perfil.php">Categoría</a></h5>
+						<h5><a href="perfil.php">Autor</a> | <a href="tutoriales.php">Categoría</a></h5>
 						<div class="rating">
 							<div class="izq"><input name="star3" type="radio" class="star"/> <input name="star3" type="radio" class="star"/> <input name="star3" type="radio" class="star"/> <input name="star3" type="radio" class="star"/> <input name="star3" type="radio" class="star"/> </div>
-							<div class="der"><a href="pag/tutorial.php">Ver Tutorial</a></div>
+							<div class="der"><a href="tutorial.php">Ver Tutorial</a></div>
 						</div>
 					</div>
 				</div>

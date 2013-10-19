@@ -3,15 +3,11 @@
 			<section>
 				<h1>Registro de Usuario</h1>
 				<article>
-					<form action="registro.php" method="POST">
+					<form action="registro.php" method="POST" enctype="multipart/form-data">
 						<ul>
 							<li>
-								<label for="nombre">Nombre:</label>
-								<input type="text"  name="nombre" id="nombre" placeholder="Nombre" required />
-							</li>
-							<li>
-								<label for="apellido">Apellido:</label>
-								<input type="text"  name="apellido" id="apellido" placeholder="Apellido" required />
+								<label for="nombre">Nombre y Apellido:</label>
+								<input type="text"  name="nombre" id="nombre" placeholder="Nombre y Apellido" required />
 							</li>
 							<li>
 								<label for="email">Email:</label>
@@ -28,6 +24,10 @@
 							<li>
 								<label for="repassword">Repetir Contraseña:</label>
 								<input type="password" name="repassword" id="repassword" placeholder="Repetir Contraseña" /><!--falta validar-->
+							</li>
+							<li>
+								<label for="foto">Foto perfil:</label>
+								<input type="file" name="imagen" id="imagen" required />
 							</li>
 							<li>
 								<label for="direccion">Dirección:</label>

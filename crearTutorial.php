@@ -22,12 +22,15 @@
 								<input type="file" name="imagen" id="imagen" required />
 							</li>
 							<li>
-								<label for="descripcioncorta">Descripción Corta:</label>
-								<textarea name="descripcioncorta" id="descripcioncorta" rows="6" cols="40" placeholder="Describi brevemente tu tutorial"></textarea>
+								<label for="tipo">Tipo:</label>
+								<select name="tipo" id="tipo">
+									<option value="publico">P&uacute;blico</option>
+									<option value="privado">Privado</option>
+								</select>
 							</li>
 							<li>
-								<label for="descripcionlarga">Descripción Larga:</label>
-								<textarea name="descripcionlarga" id="descripcionlarga" rows="20" cols="40" placeholder="Descripcion Completa"></textarea>
+								<label for="contenido">Contenido:</label>
+								<textarea name="contenido" id="contenido" rows="20" cols="40" placeholder="Descripcion Completa"></textarea>
 							</li>
 						</ul>
 						<div class="der"><input type="submit" class="boton" value="Enviar" /></div>

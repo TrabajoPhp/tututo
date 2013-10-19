@@ -9,37 +9,37 @@
 					</h3>
 					<ul>
 						<li>
-							<img src="../img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 						</li>
 						<li>
-							<img src="../img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 						</li>
 						<li>
-							<img src="../img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 						</li>
 						<li>
-							<img src="../img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 						</li>
 						<li>
-							<img src="../img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 						</li>
 						<li>
-							<img src="../img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 						</li>
 						<li>
-							<img src="../img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 						</li>
 						<li>
-							<img src="../img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 						</li>
 						<li>
-							<img src="../img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 						</li>
 						<li>
-							<img src="../img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 						</li>
 						<li>
-							<img src="../img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>Titulo Tutorial - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 						</li>
 					</ul>
 				</div>
