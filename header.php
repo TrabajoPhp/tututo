@@ -22,7 +22,7 @@
 	<body>
 		<header>
 		<?php
-			if($_SESSION["autentica"] == "SIP")
+			if(isset($_SESSION["autentica"]))
 			{
 				echo '<div id="login" style="display:none">
 				<form name="login" action="control.php" method="POST">
