@@ -1,3 +1,5 @@
+<?php @session_start();
+?>
 <!doctype html>
 <html lang ="es">
 	<head>
@@ -19,8 +21,11 @@
 	</head>
 	<body>
 		<header>
-			<div id="login">
-				<form name="login" action="#" method="POST">
+		<?php
+			if($_SESSION["autentica"] == "SIP")
+			{
+				echo '<div id="login" style="display:none">
+				<form name="login" action="control.php" method="POST">
 					 <input type="text" name="nickname" placeholder="Nickname" required />
 					 <input type="password" name="password" placeholder="Password" required />
 					 <input type="submit" class="boton" value="login" />
@@ -29,8 +34,26 @@
 			</div>
 			<!--cambiar aca a display none-->
 			<div id="logueado">
-				<a href="#" class="bsalir">Salir</a> <a href="perfil.php" class="bconfig">Mi perfil</a><p>Hola, <strong>Nickname<?php $usuario ?></strong></p> 
+				<a href="salir.php" class="bsalir">Salir</a> <a href="perfil.php" class="bconfig">Mi perfil</a><p>Hola, <strong> Nickname <? echo $_SESSION["usuarioactual"]; ?></strong></p> 
+			</div>';
+			}
+			else
+			{
+			echo '<div id="login" >
+				<form name="login" action="control.php" method="POST">
+					 <input type="text" name="nickname" placeholder="Nickname" required />
+					 <input type="password" name="password" placeholder="Password" required />
+					 <input type="submit" class="boton" value="login" />
+					<a href="registroUsuario.php" class="boton2">Registrarme</a>
+				</form>
 			</div>
+			<!--cambiar aca a display none-->
+			<div id="logueado" style="display:none">
+				<a href="salir.php" class="bsalir">Salir</a> <a href="perfil.php" class="bconfig">Mi perfil</a><p>Hola, <strong> Nickname <? echo $_SESSION["usuarioactual"]; ?></strong></p> 
+			</div>';
+			}
+		?>
+			
 			<div id="logo">
 				<img src="img/logo.png" alt="mis tutoriales" />
 			</div>

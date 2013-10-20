@@ -39,7 +39,7 @@
 							<li>
 								<input type="checkbox" name="mybox" value="acepto" required> Acepto términos y condiciones
 							</li>
-						</ul><div class="der"><input type="submit" class="boton" value="Registrarme" /></div>
+						</ul><div class="der"><input type="submit" class="boton" value="Registrarme" name="enviar" /></div>
 					</form>
 				</article>
 			</section>
