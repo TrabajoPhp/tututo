@@ -11,19 +11,19 @@ primary key (nickname)
 );
 
 CREATE TABLE categoria (
-id_categoria int(11),
+id_categoria int(11) auto_increment,
 categoria varchar(50) ,
 primary key (id_categoria)
 );
 
 CREATE TABLE tipo (
-id_tipo int(11),
+id_tipo int(11) auto_increment,
 tipo varchar(45),
 primary key (id_tipo)
 );
 
 CREATE TABLE tutorial (
-id_tutorial int(11),
+id_tutorial int(11) auto_increment,
 autor varchar(50) ,
 titulo varchar(75) ,
 imagen binary,
@@ -36,7 +36,7 @@ foreign key (tipotut) references tipo (id_tipo)
 );
 
 CREATE TABLE tut_categoria (
-id_tut_categoria int(11),
+id_tut_categoria int(11) auto_increment,
 tutorial int(11),
 categoria int(11),
 primary key (id_tut_categoria),
