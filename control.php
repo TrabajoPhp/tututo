@@ -1,6 +1,6 @@
 <?php
      /* A continuación, realizamos la conexión con nuestra base de datos en MySQL */
-     $link = mysql_connect("localhost","admin","admin");
+     $link = mysql_connect("localhost","root","");
      mysql_select_db("tututo", $link);
 
      /* El query valida si el usuario ingresado existe en la base de datos. Se utiliza la función 
