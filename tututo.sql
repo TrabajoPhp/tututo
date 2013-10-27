@@ -124,7 +124,7 @@ INSERT INTO `tut_categoria` (`id_tut_categoria`, `tutorial`, `categoria`) VALUES
 CREATE TABLE IF NOT EXISTS `usuario` (
   `nickname` varchar(50) NOT NULL DEFAULT '',
   `nombre` varchar(50) DEFAULT NULL,
-  `clave` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
   `email` varchar(50) NOT NULL,
   `direccion` varchar(50) DEFAULT NULL,
   `imagen` binary(1) DEFAULT NULL,
@@ -136,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`nickname`, `nombre`, `clave`, `email`, `direccion`, `imagen`, `fecha_nac`) VALUES
+INSERT INTO `usuario` (`nickname`, `nombre`, `password`, `email`, `direccion`, `imagen`, `fecha_nac`) VALUES
 ('AlanK', 'Alan Kraemer', '123456', 'alankraemermira@gmail.com', 'tablada', NULL, '1990-10-12'),
 ('aliciaR', 'Alicia Rosenthal', '123456', 'aliciarosenthal@gmail.com', 'defensa 1862', NULL, '1977-05-12'),
 ('ezequielA', 'Ezequiel Aramburu', '123456', 'ezequi8620@gmail.com', 'san martin 550', NULL, '1990-10-12');
