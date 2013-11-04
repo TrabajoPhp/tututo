@@ -23,7 +23,7 @@
                session_start();
                //Guardamos dos variables de sesión que nos auxiliará para saber si se está o no "logueado" un usuario
                $_SESSION["autentica"] = "SIP";
-               $_SESSION["usuarioactual"] = $_POST["nickname"]; //nombre del usuario logueado.
+               $_SESSION["usuarioactual"] = $_REQUEST["nickname"]; //nombre del usuario logueado.
                //Direccionamos a nuestra página principal del sistema.
                header ("Location: app.php");
           }

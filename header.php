@@ -24,18 +24,18 @@
 		<?php
 			if(isset($_SESSION["autentica"]))
 			{
-				echo '
-				<div id="login" style="display:none">
-				<form name="login" action="control.php" method="POST">
-					 <input type="text" name="nickname" placeholder="Nickname" required />
-					 <input type="password" name="password" placeholder="Password" required />
-					 <input type="submit" class="boton" value="login" />
+				echo "
+				<div id='login' style='display:none'>
+				<form name='login' action='control.php' method='POST'>
+					 <input type='text' name='nickname' placeholder='Nickname' required />
+					 <input type='password' name='password' placeholder='Password' required />
+					 <input type='submit' class='boton' value='login' />
 				</form>
 			</div>
 			<!--cambiar aca a display none-->
-			<div id="logueado">
-				<a href="salir.php" class="bsalir">Salir</a> <a href="perfil.php" class="bconfig">Mi perfil</a><p>Hola, <strong> Nickname <? echo $_SESSION["usuarioactual"]; ?></strong></p> 
-			</div>';
+			<div id='logueado'>
+				<a href='salir.php' class='bsalir'>Salir</a> <a href='miperfil.php' class='bconfig'>Mi perfil</a> <p>Hola, <strong> $_SESSION[usuarioactual]  </strong></p> 
+			</div>";
 			}
 			else
 			{
@@ -49,7 +49,7 @@
 			</div>
 			<!--cambiar aca a display none-->
 			<div id="logueado" style="display:none">
-				<a href="salir.php" class="bsalir">Salir</a> <a href="perfil.php" class="bconfig">Mi perfil</a><p>Hola, <strong> Nickname <? echo $_SESSION["usuarioactual"]; ?></strong></p> 
+				<a href="salir.php" class="bsalir">Salir</a> <a href="miperfil.php" class="bconfig">Mi perfil</a><p>Hola, <strong> Nickname   $_SESSION[usuarioactual]  </strong></p> 
 			</div>';
 			}
 		?>

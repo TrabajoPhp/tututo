@@ -1,4 +1,5 @@
 <?php require_once('header.php'); ?>
+<?php require_once('seguridad.php'); ?>
 		<div id="main">
 			<section>
 				<h1>Crear un nuevo tutorial</h1>
@@ -19,7 +20,7 @@
 							</li>
 							<li>
 								<label for="imagen">Imagen Representativa:</label>
-								<input type="file" name="imagen" id="imagen" required />
+								<input type="file" name="imagen" id="imagen"  />
 							</li>
 							<li>
 								<label for="tipo">Tipo:</label>
