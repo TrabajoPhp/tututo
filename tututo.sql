@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-10-2013 a las 17:19:09
+-- Tiempo de generación: 04-11-2013 a las 18:17:05
 -- Versión del servidor: 5.6.11
 -- Versión de PHP: 5.5.3
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   `id_categoria` int(11) NOT NULL AUTO_INCREMENT,
   `categoria` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_categoria`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `categoria`
@@ -40,7 +40,8 @@ CREATE TABLE IF NOT EXISTS `categoria` (
 
 INSERT INTO `categoria` (`id_categoria`, `categoria`) VALUES
 (1, 'Arte'),
-(2, 'Manualidades');
+(2, 'Historia'),
+(3, 'Economia');
 
 -- --------------------------------------------------------
 
@@ -74,46 +75,27 @@ CREATE TABLE IF NOT EXISTS `tutorial` (
   `titulo` varchar(75) DEFAULT NULL,
   `imagen` binary(1) DEFAULT NULL,
   `contenido` varchar(50) DEFAULT NULL,
+  `fecha` datetime NOT NULL,
   `valoracion` int(11) DEFAULT NULL,
   `tipotut` int(11) DEFAULT NULL,
+  `categoriatut` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_tutorial`),
   KEY `autor` (`autor`),
-  KEY `tipotut` (`tipotut`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+  KEY `tipotut` (`tipotut`),
+  KEY `categoriatut` (`categoriatut`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Volcado de datos para la tabla `tutorial`
 --
 
-INSERT INTO `tutorial` (`id_tutorial`, `autor`, `titulo`, `imagen`, `contenido`, `valoracion`, `tipotut`) VALUES
-(1, 'aliciaR', 'Probando Registros', NULL, 'asdasdasd.....', 5, 1),
-(2, 'ezequielA', 'Tutorial 02', NULL, 'Contenido tutorial 02', 5, 2),
-(3, 'AlanK', 'Tutorial 03', NULL, 'este es el contenido de otro tutorial', 2, 1),
-(4, 'aliciaR', 'Tutorial 4', NULL, 'contenido del tutorial 4', 3, 1);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tut_categoria`
---
-
-CREATE TABLE IF NOT EXISTS `tut_categoria` (
-  `id_tut_categoria` int(11) NOT NULL AUTO_INCREMENT,
-  `tutorial` int(11) DEFAULT NULL,
-  `categoria` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id_tut_categoria`),
-  KEY `tutorial` (`tutorial`),
-  KEY `categoria` (`categoria`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
-
---
--- Volcado de datos para la tabla `tut_categoria`
---
-
-INSERT INTO `tut_categoria` (`id_tut_categoria`, `tutorial`, `categoria`) VALUES
-(3, 1, 1),
-(4, 2, 2),
-(5, 3, 1);
+INSERT INTO `tutorial` (`id_tutorial`, `autor`, `titulo`, `imagen`, `contenido`, `fecha`, `valoracion`, `tipotut`, `categoriatut`) VALUES
+(1, 'aliciaR', 'Probando Registros', NULL, 'asdasdasd.....', '0000-00-00 00:00:00', 5, 1, 2),
+(2, 'ezequielA', 'Tutorial 02', NULL, 'Contenido tutorial 02', '0000-00-00 00:00:00', 5, 2, 3),
+(3, 'AlanK', 'Tutorial 03', NULL, 'este es el contenido de otro tutorial', '0000-00-00 00:00:00', 2, 1, 1),
+(4, 'aliciaR', 'Tutorial 4', NULL, 'contenido del tutorial 4', '0000-00-00 00:00:00', 3, 1, 1),
+(10, 'ezequielA', 'ertert', NULL, 'ertretertet', '2013-11-04 15:30:39', NULL, 2, NULL),
+(11, 'AlanK', 'werwerwer', NULL, 'werwerwer', '2013-11-04 15:32:09', NULL, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -124,7 +106,7 @@ INSERT INTO `tut_categoria` (`id_tut_categoria`, `tutorial`, `categoria`) VALUES
 CREATE TABLE IF NOT EXISTS `usuario` (
   `nickname` varchar(50) NOT NULL DEFAULT '',
   `nombre` varchar(50) DEFAULT NULL,
-  `clave` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
   `email` varchar(50) NOT NULL,
   `direccion` varchar(50) DEFAULT NULL,
   `imagen` binary(1) DEFAULT NULL,
@@ -136,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`nickname`, `nombre`, `clave`, `email`, `direccion`, `imagen`, `fecha_nac`) VALUES
+INSERT INTO `usuario` (`nickname`, `nombre`, `password`, `email`, `direccion`, `imagen`, `fecha_nac`) VALUES
 ('AlanK', 'Alan Kraemer', '123456', 'alankraemermira@gmail.com', 'tablada', NULL, '1990-10-12'),
 ('aliciaR', 'Alicia Rosenthal', '123456', 'aliciarosenthal@gmail.com', 'defensa 1862', NULL, '1977-05-12'),
 ('ezequielA', 'Ezequiel Aramburu', '123456', 'ezequi8620@gmail.com', 'san martin 550', NULL, '1990-10-12');
@@ -150,14 +132,8 @@ INSERT INTO `usuario` (`nickname`, `nombre`, `clave`, `email`, `direccion`, `ima
 --
 ALTER TABLE `tutorial`
   ADD CONSTRAINT `tutorial_ibfk_1` FOREIGN KEY (`autor`) REFERENCES `usuario` (`nickname`),
-  ADD CONSTRAINT `tutorial_ibfk_2` FOREIGN KEY (`tipotut`) REFERENCES `tipo` (`id_tipo`);
-
---
--- Filtros para la tabla `tut_categoria`
---
-ALTER TABLE `tut_categoria`
-  ADD CONSTRAINT `tut_categoria_ibfk_1` FOREIGN KEY (`tutorial`) REFERENCES `tutorial` (`id_tutorial`),
-  ADD CONSTRAINT `tut_categoria_ibfk_2` FOREIGN KEY (`categoria`) REFERENCES `categoria` (`id_categoria`);
+  ADD CONSTRAINT `tutorial_ibfk_2` FOREIGN KEY (`tipotut`) REFERENCES `tipo` (`id_tipo`),
+  ADD CONSTRAINT `tutorial_ibfk_3` FOREIGN KEY (`categoriatut`) REFERENCES `categoria` (`id_categoria`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

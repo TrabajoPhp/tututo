@@ -9,7 +9,7 @@
 					</h3>
 					<ul>
 					<?php require_once('conexion.php');
-					$registros=mysql_query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname)",$con);
+					$registros=mysql_query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) order by fecha desc",$con);
 					while($reg=mysql_fetch_array($registros))
 					{
 						echo ('

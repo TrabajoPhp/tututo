@@ -24,12 +24,12 @@
 		<?php
 			if(isset($_SESSION["autentica"]))
 			{
-				echo '<div id="login" style="display:none">
+				echo '
+				<div id="login" style="display:none">
 				<form name="login" action="control.php" method="POST">
 					 <input type="text" name="nickname" placeholder="Nickname" required />
 					 <input type="password" name="password" placeholder="Password" required />
 					 <input type="submit" class="boton" value="login" />
-					<a href="registroUsuario.php" class="boton2">Registrarme</a>
 				</form>
 			</div>
 			<!--cambiar aca a display none-->
@@ -39,12 +39,12 @@
 			}
 			else
 			{
-			echo '<div id="login" >
+			echo '<a href="registroUsuario.php" class="boton2">Registrarme</a>
+				<div id="login" >
 				<form name="login" action="control.php" method="POST">
 					 <input type="text" name="nickname" placeholder="Nickname" required />
 					 <input type="password" name="password" placeholder="Password" required />
 					 <input type="submit" class="boton" value="login" />
-					<a href="registroUsuario.php" class="boton2">Registrarme</a>
 				</form>
 			</div>
 			<!--cambiar aca a display none-->

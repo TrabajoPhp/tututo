@@ -142,9 +142,9 @@ footer a:hover{
 	background-color:gray;
 }
 .boton2,.boton3,.bsalir,.bconfig{
+	float:right;
 	width:80px;
 	display:block;
-	float:right;
 	background:#444444 url(../img/next.png) no-repeat right;
 	color:white;
 	padding:6px;

@@ -3,7 +3,7 @@
 			<section>
 				<h1>Crear un nuevo tutorial</h1>
 				<article>
-					<form action="registro.php" method="POST" enctype="multipart/form-data">
+					<form action="subirtuto.php" method="POST" enctype="multipart/form-data">
 						<ul>
 							<li>
 								<label for="titulo">Titulo:</label>
@@ -12,9 +12,9 @@
 							<li>
 								<label for="categoria">Categoría:</label>
 								<select name="categoria" id="categoria">
-									<option value="Arte">Arte</option>
-									<option value="Economia">Economia</option>
-									<option value="Historia">Historia</option>
+									<option value="1">Arte</option>
+									<option value="2">Economia</option>
+									<option value="3">Historia</option>
 								</select>
 							</li>
 							<li>
@@ -24,8 +24,8 @@
 							<li>
 								<label for="tipo">Tipo:</label>
 								<select name="tipo" id="tipo">
-									<option value="publico">P&uacute;blico</option>
-									<option value="privado">Privado</option>
+									<option value="1">P&uacute;blico</option>
+									<option value="2">Privado</option>
 								</select>
 							</li>
 							<li>
