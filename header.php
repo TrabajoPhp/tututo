@@ -34,7 +34,7 @@
 			</div>
 			<!--cambiar aca a display none-->
 			<div id='logueado'>
-				<a href='salir.php' class='bsalir'>Salir</a> <a href='miperfil.php' class='bconfig'>Mi perfil</a> <p>Hola, <strong> $_SESSION[usuarioactual]  </strong></p> 
+				<a href='salir.php' class='bsalir'>Salir</a> <a href='miperfil.php?nickname=$_SESSION[usuarioactual]' class='bconfig'>Mi perfil</a> <p>Hola, <strong> $_SESSION[usuarioactual]  </strong></p> 
 			</div>";
 			}
 			else
@@ -69,14 +69,13 @@
 						   <li><a href="tutoriales.php">Economia</a></li>
 						</ul>
 					</li>
-					<li><a href="perfil.php">Mi Perfil</a>
-						<ul>
-							<li><a href="perfil.php">Perfil</a></li>
-							<li><a href="#">Configuraci&oacuten</a></li>
-						</ul>
-					</li>
-					<li><a href="tutoriales.php">Mis Tutoriales</a>
-					</li>
+					<?php 
+						if(isset($_SESSION["autentica"]))
+						{
+						echo "<li><a href='perfil.php?nickname=$_SESSION[usuarioactual]'>Perfil</a></li>";
+						echo "<li><a href='tutoriales.php?autor=$_SESSION[usuarioactual]'>Mis Tutoriales</a></li>";
+						}
+					?>
 				</ul>
 				<div id="search">
 					<form name="search" action="tutoriales.php" method="GET">
