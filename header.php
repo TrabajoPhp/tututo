@@ -18,6 +18,8 @@
 		<link rel="stylesheet" type="text/css" href="css/jquery.rating.css">
 		<!--datepicker-->
 		<link rel="stylesheet" type="text/css" href="css/jquery.css">
+		<!--sceditor-->
+		<link rel="stylesheet" href="minified/themes/default.min.css" type="text/css" media="all" />
 	</head>
 	<body>
 		<header>

@@ -1,5 +1,4 @@
 <?php require_once('header.php'); ?>
-<?php require_once('seguridad.php'); ?>
 		<div id="main">
 			<section>
 				<h1>Crear un nuevo tutorial</h1>
@@ -30,8 +29,8 @@
 								</select>
 							</li>
 							<li>
-								<label for="contenido">Contenido:</label>
-								<textarea name="contenido" id="contenido" rows="20" cols="40" placeholder="Descripcion Completa"></textarea>
+								<label for="bbcode_field">Contenido:</label>
+								<textarea name="contenido" style="height:300px;width:600px;"></textarea>
 							</li>
 						</ul>
 						<div class="der"><input type="submit" class="boton" value="Enviar" /></div>
