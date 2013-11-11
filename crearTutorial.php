@@ -18,10 +18,6 @@
 								</select>
 							</li>
 							<li>
-								<label for="imagen">Imagen Representativa:</label>
-								<input type="file" name="imagen" id="imagen"  />
-							</li>
-							<li>
 								<label for="tipo">Tipo:</label>
 								<select name="tipo" id="tipo">
 									<option value="1">P&uacute;blico</option>

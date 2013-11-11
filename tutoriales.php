@@ -9,12 +9,12 @@
 					</h3>
 					<ul>
 					<?php require_once('conexion.php');
-					$registros=mysql_query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) order by fecha desc",$con);
+					$registros=mysql_query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON (tutorial.categoriatut=categoria.id_categoria)order by fecha desc",$con);
 					while($reg=mysql_fetch_array($registros))
 					{
 						echo ('
 						<li>
-							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>'.$reg["titulo"].' - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php?id='.$reg["id_tutorial"].'" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>'.$reg["titulo"].' - <a href="tutoriales.php?categoria='.$reg["categoriatut"].'">'.$reg["categoria"].'</a> - <a href="tutorial.php?id='.$reg["id_tutorial"].'" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 						</li>
 						');
 					}?>

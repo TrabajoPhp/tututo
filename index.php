@@ -12,7 +12,7 @@
 						<a class="prev" href="#"></a>
 					</h3>
 					<?php require_once('conexion.php');
-					$registros=mysql_query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) order by fecha desc",$con);
+					$registros=mysql_query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON (tutorial.categoriatut=categoria.id_categoria) order by fecha desc",$con);
 					$i=0;
 					while($reg=mysql_fetch_array($registros))
 					{
@@ -21,7 +21,7 @@
 						<div class="tut">
 							<h4>'.$reg["titulo"].'</h4>
 							<img src="img/tutoriales/img_tut.jpg" alt="" />
-							<h5><a href="perfil.php?nickname='.$reg["autor"].'">'.$reg["autor"].'</a> | <a href="tutoriales.php?categoria='.$reg["categoriatut"].'">'.$reg["categoriatut"].'</a></h5>
+							<h5><a href="perfil.php?nickname='.$reg["autor"].'">'.$reg["autor"].'</a> | <a href="tutoriales.php?categoria='.$reg["categoriatut"].'">'.$reg["categoria"].'</a></h5>
 							<div class="rating">
 								<div class="izq"><input name="star'.$i.'" type="radio" class="star"/> <input name="star'.$i.'" type="radio" class="star"/> <input name="star'.$i.'" type="radio" class="star"/> <input name="star'.$i.'" type="radio" class="star"/> <input name="star'.$i.'" type="radio" class="star"/> </div>
 								<div class="der"><a href="tutorial.php?id='.$reg["id_tutorial"].'">Ver Tutorial</a></div>
