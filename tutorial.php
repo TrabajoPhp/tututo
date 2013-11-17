@@ -10,8 +10,7 @@
 				echo ('
 					<h1 class="titulo">'.$fila->titulo.'</h1>
 					<h3 class="subtitulo"><div class="der">'.$fila->fecha.'</div> <div class="izq">de <a href="perfil.php?nickname='.$fila->autor.'">'.$fila->autor.'</a></div></h3>
-					<article>
-						<img src="img/tutoriales/img_tut02.jpg" alt="" />
+					<article class="tutorial">						
 						'.$fila->contenido.'
 						<div class="rating">
 							<div class="izq"><input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> </div>

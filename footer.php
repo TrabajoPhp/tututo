@@ -7,7 +7,7 @@
 	<script src="js/jquery-ui-1.10.3.custom.js"></script>
 	<script src="js/funciones.js"></script>
 	<!--sceditor-->
-	<script src="./minified/jquery.sceditor.bbcode.min.js"></script>
+	<script src="./minified/jquery.sceditor.xhtml.min.js"></script>
 	<script>
 			$(document).ready(function() {
 				var initEditor = function() {

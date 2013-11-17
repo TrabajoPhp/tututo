@@ -304,6 +304,15 @@ article img{
 	margin-top:10px;
 	margin-bottom:5px;
 }
+.tutorial
+{
+	padding-top:10px;
+}
+.tutorial li
+{
+	margin-left:40px;
+	border-bottom:none;
+}
 .titulo{
 	font-size:30px;
 	font-weight:bold;
