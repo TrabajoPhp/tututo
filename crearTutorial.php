@@ -1,9 +1,18 @@
 <?php require_once('header.php'); ?>
 		<div id="main">
+			<?php
+				if(isset($_REQUEST['Enviar'])) 
+				{
+					require_once('conexion.php');
+					$fecha = date("Y-m-d H:i:s");
+					$res = $conexion->query ("insert into tutorial (autor,titulo,contenido,tipotut,categoriatut,fecha)values('$_SESSION[usuarioactual]','$_REQUEST[titulo]','$_REQUEST[contenido]','$_REQUEST[tipo]','$_REQUEST[categoria]','$fecha')");
+					echo 'Su tutorial se subio perfecto!';  
+				}
+			?>
 			<section>
 				<h1>Crear un nuevo tutorial</h1>
 				<article>
-					<form action="subirtuto.php" method="POST" enctype="multipart/form-data">
+					<form action="#" method="POST" enctype="multipart/form-data">
 						<ul>
 							<li>
 								<label for="titulo">Titulo:</label>
@@ -25,11 +34,11 @@
 								</select>
 							</li>
 							<li>
-								<label for="bbcode_field">Contenido:</label>
 								<textarea name="contenido" style="height:300px;width:600px;"></textarea>
 							</li>
 						</ul>
-						<div class="der"><input type="submit" class="boton" value="Enviar" /></div>
+						
+						<div class="der"><input type="submit" class="boton" value="Enviar" name="Enviar" /></div>
 					</form>
 				</article>
 			</section>
