@@ -9,12 +9,13 @@
 		{
 			echo ('
 				<h1 class="titulo">'.$fila->titulo.'</h1>
-				<h3 class="subtitulo"><div class="der">00/00/2013</div> <div class="izq">de <a href="perfil.php?nickname='.$fila->autor.'">'.$fila->autor.'</a></div></h3>
+				<h3 class="subtitulo"><div class="der">'.$fila->fecha.'</div> <div class="izq">de <a href="perfil.php?nickname='.$fila->autor.'">'.$fila->autor.'</a></div></h3>
 				<article>
 					<img src="img/tutoriales/img_tut02.jpg" alt="" />
 					'.$fila->contenido.'
 					<div class="rating">
 						<div class="izq"><input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> </div>
+						<div class="der"><a href="">Bajar pdf</a></div>
 					</div>
 				</article>
 				</section>
