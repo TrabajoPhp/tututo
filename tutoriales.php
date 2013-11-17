@@ -14,7 +14,7 @@
 					{
 						echo ('
 						<li>
-							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>'.$fila->titulo.' - <a href="tutoriales.php?categoria='.$fila->categoriatut.'">'.$fila->categoria.'</a> - <a href="tutorial.php?id='.$fila->id_tutorial.'" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/categorias/cat'.$fila->categoriatut.'.png" alt="" /><p>'.$fila->titulo.' - <strong>Categoria:</strong><a href="tutoriales.php?categoria='.$fila->categoriatut.'"> '.$fila->categoria.'</a> - <a href="tutorial.php?id='.$fila->id_tutorial.'" class="boton4">Ver Tutorial</a><!--<a href="#" class="borrar"></a><a href="#" class="editar"></a>--></p>
 						</li>
 						');
 					}?>
