@@ -9,12 +9,12 @@
 					</h3>
 					<ul>
 					<?php require_once('conexion.php');
-					$registros=mysql_query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON (tutorial.categoriatut=categoria.id_categoria)order by fecha desc",$con);
-					while($reg=mysql_fetch_array($registros))
+					$res = $conexion->query ("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON (tutorial.categoriatut=categoria.id_categoria)order by fecha desc");
+					while($fila=$res->fetch_object())
 					{
 						echo ('
 						<li>
-							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>'.$reg["titulo"].' - <a href="tutoriales.php?categoria='.$reg["categoriatut"].'">'.$reg["categoria"].'</a> - <a href="tutorial.php?id='.$reg["id_tutorial"].'" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+							<img src="img/tutoriales/img_tut03.jpg" alt="" /><p>'.$fila->titulo.' - <a href="tutoriales.php?categoria='.$fila->categoriatut.'">'.$fila->categoria.'</a> - <a href="tutorial.php?id='.$fila->id_tutorial.'" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 						</li>
 						');
 					}?>
@@ -22,9 +22,9 @@
 				</div>
 				<h3>
 					<?php
-					$registro2=mysql_query("select count(*) as items from tutorial",$con);
-					$reg2=mysql_fetch_array($registro2);
-					echo ($reg2["items"].' Items');
+					$registros2=$conexion->query ("select count(*) as items from tutorial");
+					$reg2=$registros2->fetch_object();
+					echo ($reg2->items-1).' Items';
 					?>
 					<a class="next" href="#"></a>
 					<a class="prev" href="#"></a>

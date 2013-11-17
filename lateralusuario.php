@@ -9,16 +9,16 @@ echo ('
 			<a href="#"><img src="img/top.png" alt="" /></a>
 		</div>
 		<aside>
-			<h3 class="lateral">Autor '.$reg["autor"].'</h4>
+			<h3 class="lateral">Autor '.$fila->autor.'</h4>
 				<div id="imgperfil">
 					<img src="img/perfil/perfil.jpg" alt="" />
 				</div>
 				<div id="datosperfil">
 					<ul>
-						<li>Nickname: '.$reg["autor"].'</li>
-						<li>Email: <a href="mailto:'.$reg["email"].'">'.$reg["email"].'</a></li>
+						<li>Nickname: '.$fila->autor.'</li>
+						<li>Email: <a href="mailto:'.$fila->email.'">'.$fila->email.'</a></li>
 					</ul>
-					<a href="perfil.php?nickname='.$reg["autor"].'" class="boton2">ver Perfil</a>
+					<a href="perfil.php?nickname='.$fila->autor.'" class="boton2">ver Perfil</a>
 				</div>
 		</aside>
 	</div>

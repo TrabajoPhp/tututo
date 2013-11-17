@@ -12,29 +12,30 @@
 						<a class="prev" href="#"></a>
 					</h3>
 					<?php require_once('conexion.php');
-					$registros=mysql_query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON (tutorial.categoriatut=categoria.id_categoria) order by fecha desc",$con);
+					$res = $conexion->query ("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON (tutorial.categoriatut=categoria.id_categoria) order by fecha desc");
 					$i=0;
-					while($reg=mysql_fetch_array($registros))
+					while($fila=$res->fetch_object())
 					{
 						$i++;
 						echo ('
 						<div class="tut">
-							<h4>'.$reg["titulo"].'</h4>
+							<h4>'.$fila->titulo.'</h4>
 							<img src="img/tutoriales/img_tut.jpg" alt="" />
-							<h5><a href="perfil.php?nickname='.$reg["autor"].'">'.$reg["autor"].'</a> | <a href="tutoriales.php?categoria='.$reg["categoriatut"].'">'.$reg["categoria"].'</a></h5>
+							<h5><a href="perfil.php?nickname='.$fila->autor.'">'.$fila->autor.'</a> | <a href="tutoriales.php?categoria='.$fila->categoriatut.'">'.$fila->categoria.'</a></h5>
 							<div class="rating">
 								<div class="izq"><input name="star'.$i.'" type="radio" class="star"/> <input name="star'.$i.'" type="radio" class="star"/> <input name="star'.$i.'" type="radio" class="star"/> <input name="star'.$i.'" type="radio" class="star"/> <input name="star'.$i.'" type="radio" class="star"/> </div>
-								<div class="der"><a href="tutorial.php?id='.$reg["id_tutorial"].'">Ver Tutorial</a></div>
+								<div class="der"><a href="tutorial.php?id='.$fila->id_tutorial.'">Ver Tutorial</a></div>
 							</div>
 						</div>
 						');
-					}?>
+					}
+					?>
 				</div>
 				<h3>
 					<?php
-					$registro2=mysql_query("select count(*) as items from tutorial",$con);
-					$reg2=mysql_fetch_array($registro2);
-					echo ($reg2["items"].' Items');
+					$registros2=$conexion->query ("select count(*) as items from tutorial");
+					$reg2=$registros2->fetch_object();
+					echo ($reg2->items-1).' Items';
 					?>		
 					<a class="next" href="#"></a>
 					<a class="prev" href="#"></a>
