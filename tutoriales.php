@@ -9,7 +9,14 @@
 					</h3>
 					<ul>
 					<?php require_once('conexion.php');
-					$res = $conexion->query ("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON (tutorial.categoriatut=categoria.id_categoria)order by fecha desc");
+					//$res = $conexion->query ("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON (tutorial.categoriatut=categoria.id_categoria) where autor='$_GET[autor]' order by fecha desc");
+					if(!isset($_GET['autor'])) 
+					$_GET['autor']='';
+					if(!isset($_GET['categoria'])) 
+					$_GET['categoria']=0;
+					if(!isset($_GET['palabra'])) 
+					$_GET['palabra']='';
+					$res = $conexion->query ("call selecttutoriales('$_GET[autor]','$_GET[categoria]','$_GET[palabra]')");
 					while($fila=$res->fetch_object())
 					{
 						echo ('
@@ -22,9 +29,9 @@
 				</div>
 				<h3>
 					<?php
-					$registros2=$conexion->query ("select count(*) as items from tutorial");
+					/*$registros2=$conexion->query ("select count(*) as items from tutorial");
 					$reg2=$registros2->fetch_object();
-					echo ($reg2->items-1).' Items';
+					echo ($reg2->items-1).' Items';*/
 					?>
 					<a class="next" href="#"></a>
 					<a class="prev" href="#"></a>

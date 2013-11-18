@@ -4,10 +4,20 @@
 				<?php
 					if(isset ($_GET['privado']))
 					{
-						echo '<p>Este tutorial es privado, para verlo, tenés que loguearte o registrate.</p>';
+						echo '<h1 class="titulo">Este tutorial es privado</h1>
+						<p>Este tutorial es privado, para verlo, tenés que loguearte o registrate.</p>
+						<h3>Si ya estás registrado, ingresa con tus datos</h3>
+						<article>
+							<form name="login" action="control.php" method="POST">
+								 <input type="text" name="nickname" placeholder="Nickname" required />
+								 <input type="password" name="password" placeholder="Password" required />
+								 <input type="submit" class="boton" value="login" />
+							</form>
+						</article>
+						';
 					}
 				?>
-				<h1>Registro de Usuario</h1>
+				<h3>Registro de Usuario</h3>
 				<article>
 					<form action="registro.php" method="POST" enctype="multipart/form-data">
 						<ul>
