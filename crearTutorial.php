@@ -7,6 +7,7 @@
 					$fecha = date("Y-m-d H:i:s");
 					$res = $conexion->query ("insert into tutorial (autor,titulo,contenido,tipotut,categoriatut,fecha)values('$_SESSION[usuarioactual]','$_REQUEST[titulo]','$_REQUEST[contenido]','$_REQUEST[tipo]','$_REQUEST[categoria]','$fecha')");
 					echo 'Su tutorial se subio perfecto!';  
+					mysqli_close($conexion);
 				}
 			?>
 			<section>
@@ -21,14 +22,28 @@
 							<li>
 								<label for="categoria">Categoría:</label>
 								<select name="categoria" id="categoria">
-									<option value="1">Arte</option>
-									<option value="2">Economia</option>
-									<option value="3">Historia</option>
+									<?php
+									require_once('conexion.php');
+									$res = $conexion->query ("select * from categoria");
+									while($fila=$res->fetch_object())
+									{
+										$i++;
+										echo ('<option value="'.$fila->id_categoria.'">'.$fila->categoria.'</option>');
+									}
+									?>
 								</select>
 							</li>
 							<li>
 								<label for="tipo">Tipo:</label>
 								<select name="tipo" id="tipo">
+									<?php
+									$res2 = $conexion->query ("select * from tipo");
+									while($fila=$res->fetch_object())
+									{
+										$i++;
+										echo ('<option value="'.$fila->id_tipo.'">'.$fila->tipo.'</option>');
+									}
+									?>
 									<option value="1">P&uacute;blico</option>
 									<option value="2">Privado</option>
 								</select>

@@ -66,9 +66,14 @@
 					<li><a href="index.php">Home</a></li>
 					<li><a href="tutoriales.php">Categor&iacuteas</a>
 						<ul>
-						   <li><a href="tutoriales.php">Arte</a></li>
-						   <li><a href="tutoriales.php">Historia</a></li>
-						   <li><a href="tutoriales.php">Economia</a></li>
+							<?php
+								require_once('conexion.php');
+								$res = $conexion->query ("select * from categoria");
+								while($fila=$res->fetch_object())
+								{
+									echo ('<li><a href="tutoriales.php?categoria='.$fila->id_categoria.'">'.$fila->categoria.'</a></li>');
+								}
+							?>
 						</ul>
 					</li>
 					<?php 

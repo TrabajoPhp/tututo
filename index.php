@@ -20,7 +20,7 @@
 						echo ('
 						<div class="tut">
 							<h4>'.$fila->titulo.'</h4>
-							<img src="img/tutoriales/img_tut.jpg" alt="" />
+							<img src="img/categorias/bcat'.$fila->categoriatut.'.png" alt="" />
 							<h5><a href="perfil.php?nickname='.$fila->autor.'">'.$fila->autor.'</a> | <a href="tutoriales.php?categoria='.$fila->categoriatut.'">'.$fila->categoria.'</a></h5>
 							<div class="rating">
 								<div class="izq"><input name="star'.$i.'" type="radio" class="star"/> <input name="star'.$i.'" type="radio" class="star"/> <input name="star'.$i.'" type="radio" class="star"/> <input name="star'.$i.'" type="radio" class="star"/> <input name="star'.$i.'" type="radio" class="star"/> </div>
