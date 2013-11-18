@@ -1,6 +1,12 @@
 <?php require_once('header.php'); ?>
 		<div id="main">
 			<section>
+				<?php
+					if(isset ($_GET['privado']))
+					{
+						echo '<p>Este tutorial es privado, para verlo, tenés que loguearte o registrate.</p>';
+					}
+				?>
 				<h1>Registro de Usuario</h1>
 				<article>
 					<form action="registro.php" method="POST" enctype="multipart/form-data">

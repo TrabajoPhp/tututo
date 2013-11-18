@@ -25,7 +25,7 @@
                $_SESSION["autentica"] = "SIP";
                $_SESSION["usuarioactual"] = $_REQUEST["nickname"]; //nombre del usuario logueado.
                //Direccionamos a nuestra página principal del sistema.
-               header ("Location: app.php");
+               header ("Location: index.php");
           }
           else{
                echo"<script>alert('La contrase\u00f1a del usuario no es correcta.');
