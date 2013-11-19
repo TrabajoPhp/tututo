@@ -32,6 +32,10 @@ h3{
 	font-size:15px;
 }
 h4{ /*titulo tutorial home*/
+	background:#2069b4;
+	color:white;
+	padding:5px;
+	margin-right:5px;
 }
 h5 a{
 	color:#2069b4;
@@ -462,7 +466,7 @@ ul.menu ul {
     -o-transition: opacity .25s ease .1s;
     -ms-transition: opacity .25s ease .1s;
     transition: opacity .25s ease .1s;
-	z-index:3;
+	z-index:5;
 }
  
 ul.menu li:hover > ul { opacity: 1; }
@@ -484,7 +488,7 @@ ul.menu li:hover > ul li {
     padding: 0;
 }
 ul.menu ul li a {
-    width: 130px;
+    width: 150px;
     padding: 0 10px;
     margin: 0;
     font-size: 14px;

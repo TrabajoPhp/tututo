@@ -9,9 +9,11 @@
 			$ano_diferencia--;
 			return $ano_diferencia;
 		}
-		$registros=mysql_query("select * from usuario where nickname='$_GET[nickname]'",$con);
-		while($reg=mysql_fetch_array($registros))
-		{
+		//$registros=mysql_query("select * from usuario where nickname='$_GET[nickname]'",$con);
+		$registros=$con->query("select * from usuario where nickname='$_GET[nickname]'");
+		//while($reg=mysql_fetch_array($registros))
+		while($reg=$registros->fetch_object())
+		 		{
 		echo('
 			<div id="main">
 				<section>
@@ -37,8 +39,10 @@
 						<ul>
 			');
 		}
-			$registro2=mysql_query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) where nickname='$_GET[nickname]'",$con);
-			while($reg2=mysql_fetch_array($registro2))
+			//$registro2=mysql_query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) where nickname='$_GET[nickname]'",$con);
+			$registro2=$con->query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) where nickname='$_GET[nickname]'");
+			//while($reg2=mysql_fetch_array($registro2))
+			while($reg2=$registro2->fetch_object())
 			{
 				echo('
 							<li>
@@ -46,7 +50,9 @@
 							</li>
 				');
 			}
-			?>
+						?>
+			
+			<div class="der"><input type="button" class="boton" value="editar" name="editar" action="editarPerfil.php" /></div>
 						</ul>
 					</div>
 					<h3>

@@ -36,7 +36,7 @@
 			</div>
 			<!--cambiar aca a display none-->
 			<div id='logueado'>
-				<a href='salir.php' class='bsalir'>Salir</a> <a href='miperfil.php?nickname=$_SESSION[usuarioactual]' class='bconfig'>Mi perfil</a> <p>Hola, <strong> $_SESSION[usuarioactual]  </strong></p> 
+				<a href='salir.php' class='bsalir'>Salir</a> <a href='perfil.php?nickname=$_SESSION[usuarioactual]' class='bconfig'>Mi perfil</a> <p>Hola, <strong> $_SESSION[usuarioactual]  </strong></p> 
 			</div>";
 			}
 			else
@@ -51,7 +51,7 @@
 			</div>
 			<!--cambiar aca a display none-->
 			<div id="logueado" style="display:none">
-				<a href="salir.php" class="bsalir">Salir</a> <a href="miperfil.php" class="bconfig">Mi perfil</a><p>Hola, <strong> Nickname   $_SESSION[usuarioactual]  </strong></p> 
+				<a href="salir.php" class="bsalir">Salir</a> <a href="perfil.php" class="bconfig">Mi perfil</a><p>Hola, <strong> Nickname   $_SESSION[usuarioactual]  </strong></p> 
 			</div>';
 			}
 		?>

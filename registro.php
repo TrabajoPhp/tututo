@@ -12,10 +12,13 @@ if(isset($_POST['enviar']))
     else
     {
         $sql = 'SELECT * FROM usuario';
-        $rec = mysql_query($sql);
+		$rec = $conexion->query($sql);
+        //$rec = mysql_query($sql);
         $verificar_usuario = 0;
  
-        while($result = mysql_fetch_object($rec))
+        
+		while($result = $rec->fetch_object())
+			
         {
             if($result->nickname == $_POST['nickname'])
             {
@@ -36,7 +39,7 @@ if(isset($_POST['enviar']))
 				$fecha = $_POST['fecha'];
 				                			
                 $sql = "INSERT INTO `usuario` (`nickname`, `nombre`, `password`, `email`, `direccion`, `imagen`, `fecha_nac`) VALUES ('$nickname','$nombre','$password','$email','$direccion','$imagen','$fecha')";
-                mysql_query($sql);
+                mysqli_query($conexion,$sql);
  
                 echo 'Usted se ha registrado correctamente.';
             }

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-11-2013 a las 18:58:50
+-- Tiempo de generación: 19-11-2013 a las 13:11:47
 -- Versión del servidor: 5.6.11
 -- Versión de PHP: 5.5.3
 
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   `id_categoria` int(11) NOT NULL AUTO_INCREMENT,
   `categoria` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_categoria`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Volcado de datos para la tabla `categoria`
@@ -67,9 +67,15 @@ CREATE TABLE IF NOT EXISTS `categoria` (
 
 INSERT INTO `categoria` (`id_categoria`, `categoria`) VALUES
 (1, 'Arte'),
-(2, 'Historia'),
-(3, 'Economia'),
-(4, 'Internet');
+(2, 'Automotores'),
+(3, 'Cocina'),
+(4, 'Deportes'),
+(5, 'Fotografia'),
+(6, 'Games'),
+(7, 'Hagalo Usted Mismo'),
+(8, 'Informatica'),
+(9, 'Movil'),
+(10, 'Musica');
 
 -- --------------------------------------------------------
 
