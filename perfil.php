@@ -21,7 +21,7 @@
 				<section>
 					<h1>Perfil de '.$reg->nickname.'</h1>
 					<div id="imgperfil">
-						<img src="img/perfil/perfil.jpg" alt="" />
+					 <img src="avatar/'.$reg->nickname.'.png" border="0" width="130" height="130">
 					</div>
 					<div id="datosperfil">
 						<ul>

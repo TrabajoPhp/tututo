@@ -11,7 +11,7 @@ echo ('
 		<aside>
 			<h3 class="lateral">Autor '.$fila->autor.'</h4>
 				<div id="imgperfil">
-					<img src="img/perfil/perfil.jpg" alt="" />
+					<img src="avatar/'.$fila->autor.'.png" border="0" width="135" height="130" />
 				</div>
 				<div id="datosperfil">
 					<ul>
