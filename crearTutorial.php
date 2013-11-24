@@ -1,4 +1,5 @@
 <?php require_once('header.php'); ?>
+<?php require_once('seguridad.php'); ?>
 		<div id="main">
 			<?php
 				if(isset($_REQUEST['Enviar'])) 

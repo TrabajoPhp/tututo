@@ -21,13 +21,14 @@
 				<section>
 					<h1>Perfil de '.$reg->nickname.'</h1>
 					<div id="imgperfil">
-						<img src="img/perfil/perfil.jpg" alt="" />
+					 <img src="avatar/'.$reg->nickname.'.png" border="0" width="130" height="130">
 					</div>
 					<div id="datosperfil">
 						<ul>
 							<li>Nombre y Apellido: '.$reg->nombre.'<a href="#" class="borrar"></a><a href="#" class="editar"></a></li>
 							<li>Nickname: '.$reg->nickname.'<a href="#" class="borrar"></a><a href="#" class="editar"></a></li>
 							<li>Email: '.$reg->email.'<a href="#" class="borrar"></a><a href="#" class="editar"></a></li>
+							<li>Pais: '.$reg->direccion.'<a href="#" class="borrar"></a><a href="#" class="editar"></a></li>
 							<li>Edad: '.calculaedad ($reg->fecha_nac).'<a href="#" class="borrar"></a><a href="#" class="editar"></a></li>
 						</ul>
 					</div>

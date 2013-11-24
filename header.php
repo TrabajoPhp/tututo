@@ -12,6 +12,7 @@
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		
 		<link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/estilos.css">
 		<!--css rating-->
@@ -64,6 +65,7 @@
 			<div id="menu">
 				<ul class="menu">
 					<li><a href="index.php">Home</a></li>
+					<li><a href="crearTutorial.php">Crear tutorial</a></li>
 					<li><a href="tutoriales.php">Categor&iacuteas</a>
 						<ul>
 							<?php
@@ -80,7 +82,7 @@
 						if(isset($_SESSION["autentica"]))
 						{
 						echo "<li><a href='perfil.php?nickname=$_SESSION[usuarioactual]'>Perfil</a></li>";
-						echo "<li><a href='tutoriales.php?autor=$_SESSION[usuarioactual]'>Mis Tutoriales</a></li>";
+						//echo "<li><a href='tutoriales.php?autor=$_SESSION[usuarioactual]'>Mis Tutoriales</a></li>";
 						}
 					?>
 				</ul>
