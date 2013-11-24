@@ -17,14 +17,19 @@
 					if(!isset($_GET['palabra'])) 
 					$_GET['palabra']='';
 					$res = $conexion->query ("call selecttutoriales('$_GET[autor]','$_GET[categoria]','$_GET[palabra]')");
+					if (!$fila=$res->fetch_object())
+					{
+						echo '<li>No hay tutoriales para mostrar</li>';
+					}
 					while($fila=$res->fetch_object())
 					{
 						echo ('
 						<li>
-							<img src="img/categorias/cat'.$fila->categoriatut.'.png" alt="" /><p>'.$fila->titulo.' - <strong>Categoria:</strong><a href="tutoriales.php?categoria='.$fila->categoriatut.'"> '.$fila->categoria.'</a> - <a href="tutorial.php?id='.$fila->id_tutorial.'" class="boton4">Ver Tutorial</a><!--<a href="#" class="borrar"></a><a href="#" class="editar"></a>--></p>
+							<a href="tutoriales.php?categoria='.$fila->categoriatut.'"><img src="img/categorias/cat'.$fila->categoriatut.'.png" alt="" /></a><p>'.$fila->titulo.' <div class="dertut"><a href="tutorial.php?id='.$fila->id_tutorial.'" class="boton4">Ver Tutorial</a><!--<a href="#" class="borrar"></a><a href="#" class="editar"></a>--></div></p>
 						</li>
 						');
-					}?>
+					}
+					?>
 					</ul>
 				</div>
 				<h3>
