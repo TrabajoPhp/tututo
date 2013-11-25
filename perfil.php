@@ -44,7 +44,7 @@
 			');
 		}
 			//$registro2=mysql_query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) where nickname='$_GET[nickname]'",$con);
-			$registro2=$conexion->query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) where nickname='$_GET[nickname]'");
+			$registro2=$conexion->query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) where nickname='$_GET[nickname]' order by tutorial.fecha desc");
 			//while($reg2=mysql_fetch_array($registro2))
 			while($reg2=$registro2->fetch_object())
 			{
@@ -57,8 +57,7 @@
 			?>
 						</ul>
 					</div>
-					<h3>
-						xx Items			
+					<h3>		
 						<a class="next" href="#"></a>
 						<a class="prev" href="#"></a>
 						<a class="pag" href="#">8</a>

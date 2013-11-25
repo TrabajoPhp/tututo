@@ -20,7 +20,7 @@
 							'.$fila->contenido.'
 							<div class="rating">
 								<div class="izq"><input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> <input name="star1" type="radio" class="star"/> </div>
-								<div class="der"><a href="">Bajar pdf</a></div>
+								<div class="der"><a href="pdf.php?id='.$fila->id_tutorial.'">Bajar pdf</a></div>
 							</div>
 						</article>
 						</section>
