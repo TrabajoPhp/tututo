@@ -312,6 +312,12 @@ article img{
 	margin-top:10px;
 	margin-bottom:5px;
 }
+.confirmacion{
+	color:#555555;
+	margin-top:10px;
+	text-align: center;
+	font-weight: bold;
+}
 .tutorial
 {
 	padding-top:10px;
@@ -336,6 +342,7 @@ article img{
 .subtitulo a:hover{
 	color:white;
 }
+
 /*---------------------Perfil ----------------------------*/
 #imgperfil img{
 	border:3px solid white;

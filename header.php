@@ -81,14 +81,13 @@
 					<?php 
 						if(isset($_SESSION["autentica"]))
 						{
-						echo "<li><a href='perfil.php?nickname=$_SESSION[usuarioactual]'>Perfil</a></li>";
-						//echo "<li><a href='tutoriales.php?autor=$_SESSION[usuarioactual]'>Mis Tutoriales</a></li>";
+							echo "<li><a href='perfil.php?nickname=$_SESSION[usuarioactual]'>Perfil</a></li>";
 						}
 					?>
 				</ul>
 				<div id="search">
 					<form name="search" action="tutoriales.php" method="GET">
-						<input type="search" name="busqueda" placeholder="Buscar..." required>
+						<input type="search" name="palabra" placeholder="Buscar..." required>
 						<input type="submit" class="boton" value="ir">
 					</form>
 				</div>
