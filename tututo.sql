@@ -438,7 +438,7 @@ INSERT INTO `usuario` (`nickname`, `nombre`, `password`, `email`, `direccion`, `
 -- Filtros para la tabla `tutorial`
 --
 ALTER TABLE `tutorial`
-  ADD CONSTRAINT `tutorial_ibfk_1` FOREIGN KEY (`autor`) REFERENCES `usuario` (`nickname`),
+  ADD CONSTRAINT `tutorial_ibfk_1` FOREIGN KEY (`autor`) REFERENCES `usuario` (`nickname`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tutorial_ibfk_2` FOREIGN KEY (`tipotut`) REFERENCES `tipo` (`id_tipo`),
   ADD CONSTRAINT `tutorial_ibfk_3` FOREIGN KEY (`categoriatut`) REFERENCES `categoria` (`id_categoria`);
 

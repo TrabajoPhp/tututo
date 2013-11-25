@@ -242,6 +242,10 @@ footer a:hover{
 .der{
 	float:right;
 }
+.dertut{
+	float:right;
+	margin-top:-25px;
+}
 .der a{
 	width:80px;
 	display:block;
