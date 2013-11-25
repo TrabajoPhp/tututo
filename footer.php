@@ -1,5 +1,12 @@
 		<footer>
-			<a href="#">Acerca de Nosotros </a> | <a href="#">Ayuda </a> | <a href="#">T&eacuterminos y condiciones </a> | <a href="#">Contacto </a>
+			<?php require_once('conexion.php');
+			$res = $conexion->query ("select * from footermenu");
+			while($fila=$res->fetch_object())
+			{
+				echo ('	<a href="pagina.php?id='.$fila->id_footermenu.'">'.$fila->footer_nombre.' </a> | ');
+			}
+			?>
+			<a href="contacto.php">Contacto </a>
 		</footer>
 		<div id="copyrigth">Tp Final | Programaci&oacuten web 2 | Alan Kraemer | Ezequiel Aramburu | Alicia Rosenthal</div>
 	<!--datepicker-->
