@@ -9,16 +9,11 @@
 					</h3>
 					<ul>
 					<?php require_once('conexion.php');
-					if(!isset($_GET['autor'])) 
-					$_GET['autor']='';
-					if(!isset($_GET['categoria'])) 
-					$_GET['categoria']=0;
 					if(!isset($_GET['palabra'])) 
 					$_GET['palabra']='';
 					$palabra =$_GET['palabra'];
 					$res = @$conexion->query ("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON 
-					(tutorial.categoriatut=categoria.id_categoria) where (tutorial.categoriatut='$_GET[categoria]' or categoriatut=0) or(autor='$_GET[autor]' or autor='') order by fecha desc");//and (titulo like concat ('%','$_GET[palabra]','%'))*/
-					//$res = $conexion->query ("call selecttutoriales('$_GET[autor]','$_GET[categoria]','$_GET[palabra]')");
+					(tutorial.categoriatut=categoria.id_categoria) where (titulo like '%$palabra%') order by fecha desc");
 					$total_registros = mysqli_num_rows($res);
 					if (!$total_registros) 
 					{

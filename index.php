@@ -12,6 +12,7 @@
 						<a class="prev" href="#"></a>
 					</h3>
 					<?php require_once('conexion.php');
+					//conectar();
 					$res = $conexion->query ("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON (tutorial.categoriatut=categoria.id_categoria) order by fecha desc");
 					$i=0;
 					while($fila=$res->fetch_object())

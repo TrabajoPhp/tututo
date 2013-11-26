@@ -4,9 +4,9 @@
 		<?php require_once('conexion.php');
 		if(isset ($_GET['id']))
 		{
-			//$res = $conexion->query ("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) where id_tutorial='$_GET[id]'");
+			$res = $conexion->query ("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) where id_tutorial='$_GET[id]'");
 			
-			$res = $conexion->query ("call selecttutorial('$_GET[id]')");
+			//$res = $conexion->query ("call selecttutorial('$_GET[id]')");
 			while($fila=$res->fetch_object())
 			{
 				if ($fila->tipotut==2 &&(!isset($_SESSION["autentica"])) )

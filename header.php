@@ -86,7 +86,7 @@
 					?>
 				</ul>
 				<div id="search">
-					<form name="search" action="tutoriales.php" method="GET">
+					<form name="search" action="resultados.php" method="GET">
 						<input type="search" name="palabra" placeholder="Buscar..." required>
 						<input type="submit" class="boton" value="ir">
 					</form>

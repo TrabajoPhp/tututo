@@ -1,10 +1,12 @@
 		<footer>
-			<?php require_once('conexion.php');
+			<?php 
+			require_once('conexion.php');
 			$res = $conexion->query ("select * from footermenu");
 			while($fila=$res->fetch_object())
 			{
 				echo ('	<a href="pagina.php?id='.$fila->id_footermenu.'">'.$fila->footer_nombre.' </a> | ');
 			}
+			$conexion->close();
 			?>
 			<a href="contacto.php">Contacto </a>
 		</footer>
