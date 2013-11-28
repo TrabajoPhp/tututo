@@ -21,6 +21,8 @@
 		<link rel="stylesheet" type="text/css" href="css/jquery.css">
 		<!--sceditor-->
 		<link rel="stylesheet" href="minified/themes/default.min.css" type="text/css" media="all" />
+		<!--flexslider-->
+		<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 	</head>
 	<body>
 		<header>
@@ -66,7 +68,7 @@
 				<ul class="menu">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="crearTutorial.php">Crear tutorial</a></li>
-					<li><a href="tutoriales.php">Categor&iacuteas</a>
+					<li><a href="">Categor&iacuteas</a>
 						<ul>
 							<?php
 								require_once('conexion.php');
