@@ -21,6 +21,8 @@
 		<link rel="stylesheet" type="text/css" href="css/jquery.css">
 		<!--sceditor-->
 		<link rel="stylesheet" href="minified/themes/default.min.css" type="text/css" media="all" />
+		<!--flexslider-->
+		<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 	</head>
 	<body>
 		<header>
@@ -66,7 +68,7 @@
 				<ul class="menu">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="crearTutorial.php">Crear tutorial</a></li>
-					<li><a href="tutoriales.php">Categor&iacuteas</a>
+					<li><a href="">Categor&iacuteas</a>
 						<ul>
 							<?php
 								require_once('conexion.php');
@@ -81,14 +83,13 @@
 					<?php 
 						if(isset($_SESSION["autentica"]))
 						{
-						echo "<li><a href='perfil.php?nickname=$_SESSION[usuarioactual]'>Perfil</a></li>";
-						//echo "<li><a href='tutoriales.php?autor=$_SESSION[usuarioactual]'>Mis Tutoriales</a></li>";
+							echo "<li><a href='perfil.php?nickname=$_SESSION[usuarioactual]'>Perfil</a></li>";
 						}
 					?>
 				</ul>
 				<div id="search">
-					<form name="search" action="tutoriales.php" method="GET">
-						<input type="search" name="busqueda" placeholder="Buscar..." required>
+					<form name="search" action="resultados.php" method="GET">
+						<input type="search" name="palabra" placeholder="Buscar..." required>
 						<input type="submit" class="boton" value="ir">
 					</form>
 				</div>

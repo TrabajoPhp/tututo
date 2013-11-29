@@ -2,8 +2,18 @@
 		<div id="main">
 			<section>
 				<h1>Home</h1>
-				<div id="slider">
-					<img src="img/slide.jpg" alt="" />
+				<div class="flexslider">
+					  <ul class="slides">
+						<li>
+							<a href="registroUsuario.php"><img src="img/slider1.jpg" /></a>
+							</li>
+							<li>
+							<a href="registroUsuario.php"><img src="img/slider2.jpg" /></a>
+							</li>
+							<li>
+							<a href="registroUsuario.php"><img src="img/slider3.jpg" /></a>
+							</li>
+					  </ul>
 				</div>
 				<div id="tutoriales">
 					<h3>
@@ -12,6 +22,7 @@
 						<a class="prev" href="#"></a>
 					</h3>
 					<?php require_once('conexion.php');
+					//conectar();
 					$res = $conexion->query ("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON (tutorial.categoriatut=categoria.id_categoria) order by fecha desc");
 					$i=0;
 					while($fila=$res->fetch_object())
@@ -37,7 +48,7 @@
 					$reg2=$registros2->fetch_object();
 					echo ($reg2->items-1).' Items';
 					?>		
-					<a class="next" href="#"></a>
+					<!--<a class="next" href="#"></a>
 					<a class="prev" href="#"></a>
 					<a class="pag" href="#">8</a>
 					<a class="pag" href="#">7</a>
@@ -46,7 +57,7 @@
 					<a class="pag" href="#">4</a>
 					<a class="pag" href="#">3</a>
 					<a class="pag" href="#">2</a>
-					<a class="selected" href="#">1</a>
+					<a class="selected" href="#">1</a>-->
 				</h3>
 			</section>
 			<?php require_once('lateral.php'); ?>

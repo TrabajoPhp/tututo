@@ -1,5 +1,5 @@
 <?php require_once('header.php'); ?>
-		<div id="main">
+			<div id="main">
 					<section>
 				<?php
 					if(isset ($_GET['privado']))
@@ -17,10 +17,11 @@
 						';
 					}
 				?>
-
+				<script>
+					
 				<h3>Registro de Usuario</h3>
 				<article>
-					<form action="registro.php" method="POST" enctype="multipart/form-data">
+					<form action="registro.php" method="POST" enctype="multipart/form-data" id="registro">
 						<ul>
 							<li>
 								<label for="nombre">Nombre y Apellido:</label>
@@ -48,7 +49,8 @@
 							</li>
 							<li>
 								<label for="direccion">Pais:</label>
-													<select name="direccion" id="direccion" >
+											<select name="direccion" id="direccion" >
+																	<option>Argentina</option>
 																	<option>Afganistán</option>
 																	<option>Albania</option>
 																	<option>Alemania</option>
@@ -57,8 +59,7 @@
 																	<option>Antigua República Yugoslava de Macedonia</option>
 																	<option>Antigua y Barbuda</option>
 																	<option>Arabia Saudí</option>
-																	<option>Argelia</option>
-																	<option>Argentina</option>
+																	<option>Argelia</option>																	
 																	<option>Armenia</option>
 																	<option>Australia</option>
 																	<option>Austria</option>
@@ -263,13 +264,14 @@
 								
 							</li>
 							<li>
-								<label for="datepicker">Fecha de Nacimiento: </label><input type="text" id="datepicker" name="fecha" required />
+								<label for="date">Fecha de Nacimiento: </label><input type="date" id="date" name="fecha"  required />
+								 
 							</li>
 							<li>
 								<input type="checkbox" name="mybox" value="acepto" required> Acepto términos y condiciones
 							</li>
-						</ul><div class="der"><input type="submit" class="boton" value="Registrarme" name="enviar" /></div>
-						 
+						</ul>
+						<div class="der"><input type="submit" class="boton" value="Registrarme" name="enviar" /></div>
 					</form>
 				</article>
 			</section>

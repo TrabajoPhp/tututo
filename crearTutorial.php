@@ -1,19 +1,15 @@
 <?php require_once('header.php'); ?>
 <?php require_once('seguridad.php'); ?>
 		<div id="main">
-			<?php
-				if(isset($_REQUEST['Enviar'])) 
-				{
-					require_once('conexion.php');
-					$fecha = date("Y-m-d H:i:s");
-					$res = $conexion->query ("insert into tutorial (autor,titulo,contenido,tipotut,categoriatut,fecha)values('$_SESSION[usuarioactual]','$_REQUEST[titulo]','$_REQUEST[contenido]','$_REQUEST[tipo]','$_REQUEST[categoria]','$fecha')");
-					echo 'Su tutorial se subio perfecto!';  
-					mysqli_close($conexion);
-				}
-			?>
 			<section>
 				<h1>Crear un nuevo tutorial</h1>
 				<article>
+					<?php
+						if(isset($_REQUEST['Enviar'])) 
+						{
+							echo '<p class="confirmacion">Su tutorial se subio perfecto!</p>';
+						}
+					?>
 					<form action="#" method="POST" enctype="multipart/form-data">
 						<ul>
 							<li>
@@ -53,9 +49,17 @@
 								<textarea name="contenido" style="height:300px;width:600px;"></textarea>
 							</li>
 						</ul>
-						
 						<div class="der"><input type="submit" class="boton" value="Enviar" name="Enviar" /></div>
 					</form>
+					<?php
+						if(isset($_REQUEST['Enviar'])) 
+						{
+							require_once('conexion.php');
+							$fecha = date("Y-m-d H:i:s");
+							$res = $conexion->query ("insert into tutorial (autor,titulo,contenido,tipotut,categoriatut,fecha)values('$_SESSION[usuarioactual]','$_REQUEST[titulo]','$_REQUEST[contenido]','$_REQUEST[tipo]','$_REQUEST[categoria]','$fecha')"); 
+							mysqli_close($conexion);
+						}
+					?>
 				</article>
 			</section>
 			<?php require_once('lateral.php'); ?>

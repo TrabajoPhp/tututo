@@ -72,7 +72,7 @@ if(isset($_POST['enviar']))
                 $sql = "INSERT INTO `usuario` (`nickname`, `nombre`, `password`, `email`, `direccion`, `imagen` ,`fecha_nac`) VALUES ('$nickname','$nombre','$password','$email','$direccion','$imagen','$fecha')";
                 mysqli_query($conexion,$sql);
  
-                echo 'Usted se ha registrado correctamente.';
+               header("Location:confirmaUsuario.php");
             }
             else
             {

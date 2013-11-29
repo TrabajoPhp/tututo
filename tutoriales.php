@@ -9,15 +9,18 @@
 					</h3>
 					<ul>
 					<?php require_once('conexion.php');
-					//$res = $conexion->query ("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON (tutorial.categoriatut=categoria.id_categoria) where autor='$_GET[autor]' order by fecha desc");
 					if(!isset($_GET['autor'])) 
 					$_GET['autor']='';
 					if(!isset($_GET['categoria'])) 
 					$_GET['categoria']=0;
 					if(!isset($_GET['palabra'])) 
 					$_GET['palabra']='';
-					$res = $conexion->query ("call selecttutoriales('$_GET[autor]','$_GET[categoria]','$_GET[palabra]')");
-					if (!$fila=$res->fetch_object())
+					$palabra =$_GET['palabra'];
+					$res = @$conexion->query ("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON 
+					(tutorial.categoriatut=categoria.id_categoria) where (tutorial.categoriatut='$_GET[categoria]' or categoriatut=0) or(autor='$_GET[autor]' or autor='') order by fecha desc");//and (titulo like concat ('%','$_GET[palabra]','%'))*/
+					//$res = $conexion->query ("call selecttutoriales('$_GET[autor]','$_GET[categoria]','$_GET[palabra]')");
+					$total_registros = mysqli_num_rows($res);
+					if (!$total_registros) 
 					{
 						echo '<li>No hay tutoriales para mostrar</li>';
 					}
@@ -34,9 +37,7 @@
 				</div>
 				<h3>
 					<?php
-					/*$registros2=$conexion->query ("select count(*) as items from tutorial");
-					$reg2=$registros2->fetch_object();
-					echo ($reg2->items-1).' Items';*/
+					echo ($total_registros).' Items';
 					?>
 					<a class="next" href="#"></a>
 					<a class="prev" href="#"></a>

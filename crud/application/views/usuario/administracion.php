@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
+<?php require_once('seguridad.php'); ?>
 <title>Administracion Usuarios</title>
 <?php
 foreach($css_files as $file): ?>
