@@ -30,16 +30,8 @@
 			if(isset($_SESSION["autentica"]))
 			{
 				echo "
-				<div id='login' style='display:none'>
-				<form name='login' action='control.php' method='POST'>
-					 <input type='text' name='nickname' placeholder='Nickname' required />
-					 <input type='password' name='password' placeholder='Password' required />
-					 <input type='submit' class='boton' value='login' />
-				</form>
-			</div>
-			<!--cambiar aca a display none-->
 			<div id='logueado'>
-				<a href='salir.php' class='bsalir'>Salir</a> <a href='perfil.php?nickname=$_SESSION[usuarioactual]' class='bconfig'>Mi perfil</a> <p>Hola, <strong> $_SESSION[usuarioactual]  </strong></p> 
+				<a href='salir.php' class='bsalir'>Salir</a><a href='actualizar.php?nickname=$_SESSION[usuarioactual]' class='bconfig'>Actualizar mis datos</a> <p>Hola, <strong> $_SESSION[usuarioactual]  </strong></p> 
 			</div>";
 			}
 			else
@@ -52,10 +44,7 @@
 					 <input type="submit" class="boton" value="login" />
 				</form>
 			</div>
-			<!--cambiar aca a display none-->
-			<div id="logueado" style="display:none">
-				<a href="salir.php" class="bsalir">Salir</a> <a href="perfil.php" class="bconfig">Mi perfil</a><p>Hola, <strong> Nickname   $_SESSION[usuarioactual]  </strong></p> 
-			</div>';
+			';
 			}
 		?>
 			
@@ -83,7 +72,8 @@
 						if(isset($_SESSION["autentica"]))
 						{
 							echo "<li><a href='crearTutorial.php'>Crear tutorial</a></li>
-							<li><a href='perfil.php?nickname=$_SESSION[usuarioactual]'>Perfil</a></li>";
+							<li><a href='perfil.php?nickname=$_SESSION[usuarioactual]'>Mi Perfil</a></li>
+							<li><a href='mistutoriales.php?nickname=$_SESSION[usuarioactual]'>Mis tutoriales</a></li>";
 						}
 					?>
 				</ul>

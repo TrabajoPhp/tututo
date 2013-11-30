@@ -148,7 +148,7 @@ footer a:hover{
 .boton:hover,.bconfig:hover{
 	background-color:gray;
 }
-.boton2,.boton3,.bsalir,.bconfig{
+.boton2,.boton3,.bsalir,.bconfig, .bgconfig02{
 	float:right;
 	width:80px;
 	display:block;
@@ -190,6 +190,7 @@ footer a:hover{
 	background:#444444 url(../img/salir.png) no-repeat left;
 }
 .bconfig{
+	width:120px;
 	background:#2069b4 url(../img/config.png) no-repeat left;
 }
 .pag,.selected{
@@ -404,7 +405,7 @@ aside #datosperfil ul
 /*-----------------------------Menu Principal-----------------------------*/
 nav{
 	margin-bottom:10px;
-	max-width: 100%;
+	width:100%;
 	height: 50px;
 	background: #4c4e5a;
     background: -webkit-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
@@ -426,7 +427,7 @@ ul.menu a {
  
 ul.menu {
     height: 50px;
-    max-width: 500px;
+    max-width: 650px;
 	float:left;
 	margin:auto;
     -webkit-border-radius: 5px;

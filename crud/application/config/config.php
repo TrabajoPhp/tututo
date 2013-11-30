@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/tututo/crud';
+$config['base_url']	= 'http://localhost/programacionweb/tututo/crud';
 
 /*
 |--------------------------------------------------------------------------
