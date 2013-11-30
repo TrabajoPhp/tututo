@@ -1,5 +1,4 @@
 <?php require_once('header.php'); ?>
-<?php require_once('seguridad.php'); ?>
 		<div id="main">
 			<section>
 				<h1>Ponete en contacto con Tututo.com.ar</h1>

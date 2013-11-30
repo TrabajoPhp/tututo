@@ -67,7 +67,6 @@
 			<div id="menu">
 				<ul class="menu">
 					<li><a href="index.php">Home</a></li>
-					<li><a href="crearTutorial.php">Crear tutorial</a></li>
 					<li><a href="">Categor&iacuteas</a>
 						<ul>
 							<?php
@@ -83,7 +82,8 @@
 					<?php 
 						if(isset($_SESSION["autentica"]))
 						{
-							echo "<li><a href='perfil.php?nickname=$_SESSION[usuarioactual]'>Perfil</a></li>";
+							echo "<li><a href='crearTutorial.php'>Crear tutorial</a></li>
+							<li><a href='perfil.php?nickname=$_SESSION[usuarioactual]'>Perfil</a></li>";
 						}
 					?>
 				</ul>

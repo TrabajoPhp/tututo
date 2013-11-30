@@ -2,7 +2,7 @@
 @session_start();
 
 if($_SESSION["autentica"] != "SIP"){
-	header("Location: asegurarLogueo.php");
+	header("Location: registroUsuario.php");
 	exit();
 }
 ?>

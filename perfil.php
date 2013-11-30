@@ -25,11 +25,12 @@
 					</div>
 					<div id="datosperfil">
 						<ul>
-							<li>Nombre y Apellido: '.$reg->nombre.'<a href="#" class="borrar"></a><a href="#" class="editar"></a></li>
-							<li>Nickname: '.$reg->nickname.'<a href="#" class="borrar"></a><a href="#" class="editar"></a></li>
-							<li>Email: '.$reg->email.'<a href="#" class="borrar"></a><a href="#" class="editar"></a></li>
-							<li>Pais: '.$reg->direccion.'<a href="#" class="borrar"></a><a href="#" class="editar"></a></li>
-							<li>Edad: '.calculaedad ($reg->fecha_nac).'<a href="#" class="borrar"></a><a href="#" class="editar"></a></li>
+							<li>Nombre y Apellido: '.$reg->nombre.'</li>
+							<li>Nickname: '.$reg->nickname.'</li>
+							<li>Email: '.$reg->email.'</li>
+							<li>Pais: '.$reg->direccion.'</li>
+							<li>Edad: '.calculaedad ($reg->fecha_nac).'</li>
+							<li><a href="ubicacion.php"  target="_blank"> Lugar desde donde estas conectado </a></li>
 						</ul>
 					</div>
 					<div id="tutoriales">
@@ -43,14 +44,12 @@
 						<ul>
 			');
 		}
-			//$registro2=mysql_query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) where nickname='$_GET[nickname]'",$con);
 			$registro2=$conexion->query("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) where nickname='$_GET[nickname]' order by tutorial.fecha desc");
-			//while($reg2=mysql_fetch_array($registro2))
 			while($reg2=$registro2->fetch_object())
 			{
 				echo('
 							<li>
-								<img src="../img/tutoriales/img_tut03.jpg" alt="" /><p>'.$reg2->titulo.' - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php?id='.$reg2->id_tutorial.'" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
+								<p>'.$reg2->titulo.' - <a href="tutoriales.php">Categoría</a> - <a href="tutorial.php?id='.$reg2->id_tutorial.'" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></p>
 							</li>
 				');
 			}
@@ -58,7 +57,7 @@
 						</ul>
 					</div>
 					<h3>		
-						<a class="next" href="#"></a>
+						<!--<a class="next" href="#"></a>
 						<a class="prev" href="#"></a>
 						<a class="pag" href="#">8</a>
 						<a class="pag" href="#">7</a>
@@ -67,7 +66,7 @@
 						<a class="pag" href="#">4</a>
 						<a class="pag" href="#">3</a>
 						<a class="pag" href="#">2</a>
-						<a class="selected" href="#">1</a>
+						<a class="selected" href="#">1</a>-->
 					</h3>
 				</section>
 			<?php require_once('lateral.php'); ?>

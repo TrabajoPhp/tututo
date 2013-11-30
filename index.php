@@ -23,7 +23,7 @@
 					</h3>
 					<?php require_once('conexion.php');
 					//conectar();
-					$res = $conexion->query ("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON (tutorial.categoriatut=categoria.id_categoria) order by fecha desc");
+					$res = $conexion->query ("select * from tutorial INNER JOIN usuario ON(tutorial.autor=usuario.nickname) INNER JOIN categoria ON (tutorial.categoriatut=categoria.id_categoria) order by fecha desc limit 9");
 					$i=0;
 					while($fila=$res->fetch_object())
 					{
@@ -46,7 +46,7 @@
 					<?php
 					$registros2=$conexion->query ("select count(*) as items from tutorial");
 					$reg2=$registros2->fetch_object();
-					echo ($reg2->items-1).' Items';
+					echo 'Hay '.($reg2->items).' tutoriales disponibles';
 					?>		
 					<!--<a class="next" href="#"></a>
 					<a class="prev" href="#"></a>

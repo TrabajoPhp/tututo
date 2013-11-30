@@ -5,15 +5,8 @@ include_once "conexion.php";
 
 if(isset($_POST['enviar']))
 {
-    if($_POST['nickname'] == '' or $_POST['password'] == '' or $_POST['repassword'] == '')
-    {
-        echo 'Por favor llene todos los campos.';
-    }
-    else
-    {
         $sql = 'SELECT * FROM usuario';
 		$rec = $conexion->query($sql);
-        //$rec = mysql_query($sql);
         $verificar_usuario = 0;
  
         
@@ -28,8 +21,8 @@ if(isset($_POST['enviar']))
  
         if($verificar_usuario == 0)
         {
-            if($_POST['password'] == $_POST['repassword'])
-            {
+            /*if($_POST['password'] == $_POST['repassword'])
+            {*/
 				$nickname = $_POST['nickname'];
                 $nombre = $_POST['nombre'];
 				$password = $_POST['password'];
@@ -64,24 +57,15 @@ if(isset($_POST['enviar']))
 									} else { 
 										echo  "Error desconocido o no elegiste imagen."; 
 										die(); 
-									} 
-				
-				
-				
+									}
 				                			
                 $sql = "INSERT INTO `usuario` (`nickname`, `nombre`, `password`, `email`, `direccion`, `imagen` ,`fecha_nac`) VALUES ('$nickname','$nombre','$password','$email','$direccion','$imagen','$fecha')";
                 mysqli_query($conexion,$sql);
  
-               header("Location:confirmaUsuario.php");
-            }
-            else
-            {
-                echo 'Las claves no son iguales, intente nuevamente.';
-            }
+               header("Location:registroUsuario.php?mensaje");
         }
         else
         {
             echo 'Este nickname ya ha sido registrado anteriormente.';
         }
-    }
 }
