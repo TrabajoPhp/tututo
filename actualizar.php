@@ -2,6 +2,18 @@
 <?php require_once('seguridad.php'); ?>
 
 		<div id="main">
+				<?php
+					if(isset ($_GET['mensaje']))
+					echo '<p class="confirmacion">Perfil actualizado correctamente!</p>';
+				?>
+				<?php
+					if(isset ($_GET['mensaje1']))
+					echo '<p class="confirmacion">El fomato de la foto no es valido</p>';
+				?>
+				<?php
+								if(isset ($_GET['mensaje2']))
+								echo '<p class="confirmacion">Las contraseñas no son iguales</p>';
+							?>
 					<section>
 				
 				<?php
@@ -33,7 +45,7 @@
 							</li>
 							<li>
 								<label for='repassword'>Repetir Contraseña:</label>
-								<input type='password' name='repassword' id='repassword' placeholder='Repetir Contraseña' /><!--falta validar-->
+								<input type='password' name='repassword' id='repassword' placeholder='Repetir Contraseña'required /><!--falta validar-->
 							</li>
 							<li>
 								<label for='foto'>Foto perfil:</label>
