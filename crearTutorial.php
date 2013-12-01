@@ -5,10 +5,7 @@
 				<h1>Crear un nuevo tutorial</h1>
 				<article>
 					<?php
-						if(isset($_REQUEST['Enviar'])) 
-						{
-							echo '<p class="confirmacion">Su tutorial se subio perfecto!</p>';
-						}
+						
 					?>
 					<form action="#" method="POST" enctype="multipart/form-data">
 						<ul>
@@ -46,7 +43,7 @@
 								</select>
 							</li>
 							<li>
-								<textarea name="contenido" style="height:300px;width:600px;"></textarea>
+								<textarea name="contenido" style="height:300px;width:600px;" required></textarea>
 							</li>
 						</ul>
 						<div class="der"><input type="submit" class="boton" value="Enviar" name="Enviar" /></div>
@@ -56,8 +53,8 @@
 						{
 							require_once('conexion.php');
 							$fecha = date("Y-m-d H:i:s");
-							$res = $conexion->query ("insert into tutorial (autor,titulo,contenido,tipotut,categoriatut,fecha)values('$_SESSION[usuarioactual]','$_REQUEST[titulo]','$_REQUEST[contenido]','$_REQUEST[tipo]','$_REQUEST[categoria]','$fecha')"); 
-							mysqli_close($conexion);
+							$res3 = $conexion->query ("insert into tutorial (autor,titulo,contenido,tipotut,categoriatut,fecha)values('$_SESSION[usuarioactual]','$_REQUEST[titulo]','$_REQUEST[contenido]','$_REQUEST[tipo]','$_REQUEST[categoria]','$fecha')"); 
+							echo '<p class="confirmacion">Su tutorial se subio perfecto!</p>';
 						}
 					?>
 				</article>
