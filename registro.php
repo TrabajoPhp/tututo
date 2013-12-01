@@ -21,8 +21,8 @@ if(isset($_POST['enviar']))
  
         if($verificar_usuario == 0)
         {
-            /*if($_POST['password'] == $_POST['repassword'])
-            {*/
+            if($_POST['password'] == $_POST['repassword'])
+            {
 				$nickname = $_POST['nickname'];
                 $nombre = $_POST['nombre'];
 				$password = $_POST['password'];
@@ -66,6 +66,9 @@ if(isset($_POST['enviar']))
         }
         else
         {
-            echo 'Este nickname ya ha sido registrado anteriormente.';
+			header("Location:registroUsuario.php?mensaje2");
+           
         }
+		}
+			else {header("Location:registroUsuario.php?mensaje3");}
 }

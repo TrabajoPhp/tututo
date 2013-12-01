@@ -24,7 +24,7 @@
 					echo '<p class="confirmacion">Gracias registrarse en tututo!</p>';
 				?>
 				<article>
-					<form action="registro.php" method="POST" enctype="multipart/form-data">
+					<form action="registro.php" method="POST" enctype="multipart/form-data" name="registro" id="registro">
 						<ul>
 							<li>
 								<label for="nombre">Nombre y Apellido:</label>
@@ -38,13 +38,21 @@
 								<label for="nickname">Nickname:</label>
 								<input type="text" name="nickname" id="nickname" placeholder="Nickname" required />
 							</li>
+							<?php
+								if(isset ($_GET['mensaje3']))
+								echo '<p class="confirmacion">Este nickname ya ha sido registrado anteriormente.</p>';
+							?>
 							<li>
 								<label for="password">Contraseña:</label>
 								<input type="password" name="password" id="password" placeholder="Contraseña" required />
 							</li>
+							<?php
+								if(isset ($_GET['mensaje2']))
+								echo '<p class="confirmacion">Las contraseñas no son iguales</p>';
+							?>
 							<li>
 								<label for="repassword">Repetir Contraseña:</label>
-								<input type="password" name="repassword" id="repassword" placeholder="Repetir Contraseña" /><!--falta validar-->
+								<input type="password" name="repassword" id="repassword" placeholder="Repetir Contraseña" required /><!--falta validar-->
 							</li>
 							<li>
 								<label for="foto">Foto perfil:</label>
@@ -74,5 +82,6 @@
 					</form>
 				</article>
 			</section>
-			<?php require_once('lateral.php'); ?>
+								  
+						<?php require_once('lateral.php'); ?>
 		<?php require_once('footer.php'); ?>

@@ -1,6 +1,6 @@
 $(document).ready(function() {     
 
-$("#registro").validate({
+$(#registro).validate({
         rules: {
             nombre: { required: true, minlength: 6, maxlength: 30},
 			nickname: { required: true, minlength: 4, maxlength: 10},
