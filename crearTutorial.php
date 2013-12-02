@@ -43,7 +43,7 @@
 								</select>
 							</li>
 							<li>
-								<textarea name="contenido" style="height:300px;width:600px;"></textarea>
+								<textarea name="contenido" style="height:300px;width:600px;" required></textarea>
 							</li>
 						</ul>
 						<div class="der"><input type="submit" class="boton" value="Enviar" name="Enviar" /></div>
