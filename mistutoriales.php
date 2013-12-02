@@ -17,7 +17,7 @@
 					{
 						echo ('
 						<li>
-								<p>'.$fila->titulo.'<div class="dertut"><a href="tutorial.php?id='.$fila->id_tutorial.'" class="boton4">Ver Tutorial</a><a href="#" class="borrar"></a><a href="#" class="editar"></a></div></p>
+								<p>'.$fila->titulo.'<div class="dertut"><a href="tutorial.php?id='.$fila->id_tutorial.'" class="boton4">Ver Tutorial</a><a href="borrarTuto.php?id='.$fila->id_tutorial.'" class="borrar" ></a><a href="editarTuto.php?id='.$fila->id_tutorial.'" class="editar"></a></div></p>
 						</li>
 						');
 					}
@@ -30,5 +30,6 @@
 					?>
 				</h3>
 			</section>
+		
 		<?php require_once('lateral.php'); ?>
 	<?php require_once('footer.php'); ?>

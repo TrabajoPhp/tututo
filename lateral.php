@@ -6,9 +6,9 @@
   js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-		<a href="https://www.facebook.com/pages/Tututo/1415391032025281?skip_nax_wizard=true"><img src="img/facebook.png" alt="facebook" /></a>
-		<a href="#"><img src="img/twitter.png" alt="twitter" /></a>
-		<a href="#"><img src="img/youtube.png" alt="youtube" /></a>
+		<a href="https://www.facebook.com/pages/Tututo/1415391032025281?skip_nax_wizard=true" target="_blank"><img src="img/facebook.png" alt="facebook" /></a>
+		<a href="https://twitter.com/tututoweb" target="_blank"><img src="img/twitter.png" alt="twitter" /></a>
+		<a href="http://www.youtube.com/channel/UCFB9PWdtwlMzvImr016Z8og" target="_blank"><img src="img/youtube.png" alt="youtube" /></a>
 	</div>
 	<div id="top">
 		<a href="#"><img src="img/top.png" alt="" /></a>
